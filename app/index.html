@@ -14,13 +14,14 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="tiktokFitnessApp">
+  <body id="background" ng-app="tiktokFitnessApp">
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
+    <img src="images/tiktok-logo.png" class="logo" alt="">&nbsp;</img>
     <!-- Add your site or application content here -->
-    <div class="header">
+    <!-- <div class="header">
       <div class="navbar navbar-default" role="navigation">
         <div class="container">
           <div class="navbar-header">
@@ -45,17 +46,17 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <div class="container">
     <div ng-view=""></div>
     </div>
 
-    <div class="footer">
+    <!-- <div class="footer">
       <div class="container">
         <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
       </div>
-    </div>
+    </div> -->
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -68,6 +69,28 @@
        ga('create', 'UA-XXXXX-X');
        ga('send', 'pageview');
     </script>
+
+    <!-- <script>
+      $(window).load(function() {
+        var theWindow   = $(window),
+            $bg         = $("#bg"),
+            aspectRatio = $bg.width() / $bg.height();
+
+        function resizeBg() {
+          if ( (theWindow.width() / theWindow.height()) < aspectRatio ) {
+            $bg
+              .removeClass()
+              .addClass('bgheight');
+          } else {
+            $bg
+              .removeClass()
+              .addClass('bgwidth');
+          }
+        }
+
+        theWindow.resize(resizeBg).trigger("resize");
+      })
+    </script> -->
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
