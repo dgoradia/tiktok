@@ -1,6 +1,9 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// @import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400';
+// @import 'https://fonts.googleapis.com/css?family=Lato:300';
+@import 'https://fonts.googleapis.com/css?family=Dosis:300,400,500,600';
 // endbower
 
 .browsehappy {
@@ -77,22 +80,182 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   animation-delay: 7s;
 }
 
+*::-moz-selection {
+  background: #be2d32 none repeat scroll 0 0;
+  color: #fdf9ee;
+}
+
+body, html {
+    // font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Dosis', sans-serif;
+}
+
 body {
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+// body#background {
+//   background:
+//     linear-gradient(
+//       rgba(0, 0, 0, 0.7),
+//       rgba(0, 0, 0, 0.7)
+//     ),
+//     url(../images/training-train-lime-barbell-39688.jpeg) no-repeat 50% 50% fixed;
+//   background-size: cover;
+//   -moz-background-size: cover;
+//   -o-background-size: cover;
+//   -webkit-background-size: cover;
+// }
+
+main > section {
+  min-height: 100vh;
+  overflow: hidden;
+  top: 0;
+  width: 100vw;
+  transition: all 0.3s cubic-bezier(0.475, 0.005, 0.135, 0.985) 0s;
+  box-shadow: -2px 0 5px 0 rgba(50, 50, 50, 0.45);
+}
+
+main > section:not(.active) {
+  cursor: pointer;
+}
+
+main > section, nav {
+  position: fixed;
+}
+
+main > section > aside {
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  width: 3vw;
+  z-index: 2;
+}
+
+main > section > aside header {
+  padding: 18px;
+  width: 2vw;
+  font-size: 1rem;
+  line-height: 1.2em;
+  position: absolute;
+  text-align: center;
+  word-break: break-all;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+main > section > .container {
+  height: 100%;
+  overflow-x: hidden;
+  position: absolute;
+  width: 100%;
+}
+
+h1, h2, h3, h4 {
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  line-height: 1.7em;
+}
+
+h1, h2, h3, h4, p {
+  font-size: 1.2em;
+  font-weight: 500;
+  margin: 0;
+}
+
+h1, h2, h3, h4, legend, p, td, th, ul {
   padding: 0;
 }
 
-body#background {
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav,
+section, summary {
+  display: block;
+}
+
+#first {
+  background-color: #151515;
   background:
     linear-gradient(
       rgba(0, 0, 0, 0.7),
       rgba(0, 0, 0, 0.7)
     ),
-    url(../images/training-train-lime-barbell-39688.jpeg) no-repeat 50% 50% fixed;
+    url(../images/first-bg.jpeg) no-repeat 50% 50% fixed;
   background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
 }
+
+#first, #first a {
+  color: #fdf9ee;
+}
+
+#first #intro {
+  // background: #151515 none no-repeat scroll center center / cover;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+#first .container > article {
+  padding: 4vw 4vw 9vw 9vw;
+}
+
+#second {
+  background-color: #fdf9ee;
+  // background:
+  //     linear-gradient(
+  //       rgba(0, 0, 0, 0.7),
+  //       rgba(0, 0, 0, 0.7)
+  //     ),
+  //     url(../images/second-bg.jpg) no-repeat 3vw 50% fixed;
+  // background-size: cover;
+  // -moz-background-size: cover;
+  // -o-background-size: cover;
+  // -webkit-background-size: cover;
+  transform: translate3d(94vw, 0px, 0px);
+}
+
+#second:hover {
+  background-color: #fdf9ee;
+  transform: translate3d(93.5vw, 0px, 0px);
+}
+
+#second.active, #second.active:hover, #second.subactive {
+  transform: translate3d(3vw, 0px, 0px);
+}
+
+#third {
+  background-color: #c0392b;
+  transform: translate3d(97vw, 0px, 0px);
+  color: #fdf9ee;
+}
+
+#third:hover {
+  background-color: #c0392b;
+  transform: translate3d(96.5vw, 0px, 0px);
+}
+
+#third.active, #third.active:hover, #third.subactive {
+  transform: translate3d(6vw, 0px, 0px);
+}
+
+// #fourth {
+//   background-color: #2c3e50;
+//   transform: translate3d(97vw, 0px, 0px);
+// }
+//
+// #fourth:hover {
+//   background-color: #2c3e50;
+//   transform: translate3d(96.5vw, 0px, 0px);
+// }
+//
+// #fourth.active, #fourth.active:hover, #fourth.subactive {
+//   transform: translate3d(9vw, 0px, 0px);
+// }
 
 .logo {
   position: fixed;

@@ -19,48 +19,55 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <img src="images/tiktok-logo.png" class="logo" alt="">&nbsp;</img>
-    <!-- Add your site or application content here -->
-    <!-- <div class="header">
-      <div class="navbar navbar-default" role="navigation">
+    <!-- <img src="images/tiktok-logo.png" class="logo" alt="">&nbsp;</img> -->
+
+    <main>
+      <section id="first" class="wrapper active">
+        <aside>
+          <header>
+            <h1>T<br>R<br>E<br>V<br>O<br>R<br><br></h1>
+            <h1>O<br>K<br>E<br>E<br>F<br>E<br></h1>
+          </header>
+        </aside>
         <div class="container">
-          <div class="navbar-header">
-
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-
-            <a class="navbar-brand" href="#/">tiktokFitness</a>
-          </div>
-
-          <div class="collapse navbar-collapse" id="js-navbar-collapse">
-
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">Home</a></li>
-              <li><a ng-href="#/about">About</a></li>
-              <li><a ng-href="#/">Contact</a></li>
-            </ul>
-          </div>
+        <div ng-view=""></div>
         </div>
-      </div>
-    </div> -->
+        <!-- <div class="container">
+          <article id="intro"> -->
+            <!-- <svg class="train" preserveAspectRatio="xMidYMid slice" viewBox="0 0 850 600" height="100%" width="100%" y="0px" x="0px" xmlns="http://www.w3.org/2000/svg" version="1.1">
+              <image href="/images/training-train-lime-barbell-39688.jpeg" preserveAspectRatio="none" x="0" y="0" width="850" height="600"></image>
+              <rect x="850" y="0" width="850" height="600" style="fill-opacity: 1;" fill="#151515"></rect>
+            </svg> -->
+            <!-- <p class="fade-in one">Time to change your life.</p>
+            <span class="fade-in two">Look better. </span>
+            <span class="fade-in three">Feel better. </span>
+            <span class="fade-in four">Perform better. </span>
+          </article>
+        </div> -->
+      </section>
+      <section id="second" class="wrapper">
+        <aside>
+          <header>
+            <h1>T<br>R<br>A<br>I<br>N<br>I<br>N<br>G<br></h1>
+          </header>
+        </aside>
+      </section>
+      <section id="third" class="wrapper">
+        <aside>
+          <header>
+            <h1>G<br>E<br>T<br><br></h1>
+            <h1>S<br>T<br>A<br>R<br>T<br>E<br>D<br></h1>
+          </header>
+        </aside>
+      </section>
+    </main>
 
-    <div class="container">
+    <!-- <div class="container">
     <div ng-view=""></div>
-    </div>
-
-    <!-- <div class="footer">
-      <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-      </div>
     </div> -->
-
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-     <script>
+     <!-- <script>
        !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
        (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
        r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
@@ -68,28 +75,6 @@
 
        ga('create', 'UA-XXXXX-X');
        ga('send', 'pageview');
-    </script>
-
-    <!-- <script>
-      $(window).load(function() {
-        var theWindow   = $(window),
-            $bg         = $("#bg"),
-            aspectRatio = $bg.width() / $bg.height();
-
-        function resizeBg() {
-          if ( (theWindow.width() / theWindow.height()) < aspectRatio ) {
-            $bg
-              .removeClass()
-              .addClass('bgheight');
-          } else {
-            $bg
-              .removeClass()
-              .addClass('bgwidth');
-          }
-        }
-
-        theWindow.resize(resizeBg).trigger("resize");
-      })
     </script> -->
 
     <!-- build:js(.) scripts/vendor.js -->

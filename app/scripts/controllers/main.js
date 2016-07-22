@@ -8,7 +8,7 @@
  * Controller of the tiktokFitnessApp
  */
 angular.module('tiktokFitnessApp')
-  .controller('MainCtrl', function (preloader) {
+  .controller('MainCtrl', function (preloader, $rootScope, $location) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -21,10 +21,9 @@ angular.module('tiktokFitnessApp')
         'images/large.jpg'
     ];
 
-    preloader.preloadImages(this.imageLocations)
-        .then(function(resp) {
-            console.log(resp);
-        }, function(error) {
-            console.log(error);
-        });
+    preloader.preloadImages(this.imageLocations);
+
+    $rootScope.go = function(path) {
+        $location.path(path);
+    };
   });
