@@ -9,9 +9,4 @@
  */
 angular.module('tiktokFitnessApp')
   .controller('TrainingCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
   });

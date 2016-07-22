@@ -176,18 +176,35 @@ section, summary {
   display: block;
 }
 
+video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  // padding-left: 3vw;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+#bgvid {
+  opacity: 0.8;
+}
+
 #first {
   background-color: #151515;
-  background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.7),
-      rgba(0, 0, 0, 0.7)
-    ),
-    url(../images/first-bg.jpeg) no-repeat 50% 50% fixed;
-  background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  -webkit-background-size: cover;
+  // background:
+  //   linear-gradient(
+  //     rgba(0, 0, 0, 0.7),
+  //     rgba(0, 0, 0, 0.7)
+  //   ),
+  //   url(../images/first-bg.jpeg) no-repeat 50% 50% fixed;
+  // background-size: cover;
+  // -moz-background-size: cover;
+  // -o-background-size: cover;
+  // -webkit-background-size: cover;
 }
 
 #first, #first a {
@@ -227,6 +244,7 @@ section, summary {
 
 #second.active, #second.active:hover, #second.subactive {
   transform: translate3d(3vw, 0px, 0px);
+  transition-duration: 0.6s;
 }
 
 #third {
@@ -242,6 +260,7 @@ section, summary {
 
 #third.active, #third.active:hover, #third.subactive {
   transform: translate3d(6vw, 0px, 0px);
+  transition-duration: 0.6s;
 }
 
 // #fourth {

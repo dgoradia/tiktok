@@ -15,7 +15,6 @@
     <!-- endbuild -->
   </head>
   <body id="background" ng-app="tiktokFitnessApp">
-    {{activePane}}
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -30,8 +29,13 @@
             <h1>O<br>K<br>E<br>E<br>F<br>E<br></h1>
           </header>
         </aside>
+        <video autoplay loop muted id="bgvid">
+          <source src="videos/training.webm" type="video/webm"></source>
+          <source src="videos/training.mp4" type="video/mp4"></source>
+        </video>
         <div class="container">
-          <div ui-view="main"></div>
+          <div ui-view="main">
+          </div>
         </div>
       </section>
       <section id="second" class="wrapper" ng-class="{active: activePane == '/training', subactive: activePane == '/getstarted'}">
