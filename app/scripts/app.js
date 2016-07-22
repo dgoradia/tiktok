@@ -36,10 +36,20 @@ angular
         .state('training', {
             url: '/training',
             views: {
-                'training@': {
+                'training': {
                     templateUrl: 'views/training.html',
                     controller: 'TrainingCtrl',
                     controllerAs: 'training'
+                }
+            }
+        })
+        .state('testimonials', {
+            url: '/testimonials',
+            views: {
+                'testimonials': {
+                    templateUrl: 'views/testimonials.html',
+                    controller: 'TestimonialsCtrl',
+                    controllerAs: 'testimonials'
                 }
             }
         })

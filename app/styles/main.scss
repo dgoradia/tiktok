@@ -98,18 +98,15 @@ body {
   overflow-x: hidden;
 }
 
-// body#background {
-//   background:
-//     linear-gradient(
-//       rgba(0, 0, 0, 0.7),
-//       rgba(0, 0, 0, 0.7)
-//     ),
-//     url(../images/training-train-lime-barbell-39688.jpeg) no-repeat 50% 50% fixed;
-//   background-size: cover;
-//   -moz-background-size: cover;
-//   -o-background-size: cover;
-//   -webkit-background-size: cover;
-// }
+a {
+  color: inherit;
+}
+
+a:active, a:hover {
+  outline: none;
+  text-decoration: none;
+  color: #c0392b;
+}
 
 main > section {
   min-height: 100vh;

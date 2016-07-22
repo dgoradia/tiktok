@@ -21,7 +21,7 @@
 
     <main>
       <section id="first" class="wrapper" ng-class="{active: activePane == '/'}">
-        <aside go-to-view="/">
+        <aside ui-sref="main">
           <header>
             <h1>T<br>R<br>E<br>V<br>O<br>R<br><br></h1>
             <h1>O<br>K<br>E<br>E<br>F<br>E<br></h1>
@@ -40,17 +40,21 @@
         </div>
       </section>
       <section id="second" class="wrapper" ng-class="{active: activePane == '/training', subactive: activePane == '/getstarted'}">
-        <aside go-to-view="/training">
+        <aside ui-sref="training">
           <header>
-            <h1>T<br>R<br>A<br>I<br>N<br>I<br>N<br>G<br></h1>
+            <h1>T<br>R<br>A<br>I<br>N<br>I<br>N<br>G<br><br></h1>
           </header>
+          <!-- <footer>
+            <a ui-sref="testimonials"><h1>T<br>E<br>S<br>T<br>I<br>M<br>O<br>N<br>I<br>A<br>L<br>S<br></h1></a>
+          </footer> -->
         </aside>
         <div class="container">
           <div ui-view="training"></div>
+          <!-- <div ui-view="testimonials"></div> -->
         </div>
       </section>
       <section id="third" class="wrapper" ng-class="{active: activePane == '/getstarted'}">
-        <aside go-to-view="/getstarted">
+        <aside ui-sref="getstarted">
           <header>
             <h1>G<br>E<br>T<br><br></h1>
             <h1>S<br>T<br>A<br>R<br>T<br>E<br>D<br></h1>
@@ -93,6 +97,7 @@
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/training.js"></script>
         <script src="scripts/controllers/getstarted.js"></script>
+        <script src="scripts/controllers/testimonials.js"></script>
         <script src="scripts/controllers/sound.js"></script>
         <script src="scripts/factories/preloader.js"></script>
         <script src="scripts/directives/go-to-view.js"></script>
