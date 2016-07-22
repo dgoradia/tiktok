@@ -15,6 +15,7 @@
     <!-- endbuild -->
   </head>
   <body id="background" ng-app="tiktokFitnessApp">
+    {{activePane}}
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -22,43 +23,37 @@
     <!-- <img src="images/tiktok-logo.png" class="logo" alt="">&nbsp;</img> -->
 
     <main>
-      <section id="first" class="wrapper active">
-        <aside>
+      <section id="first" class="wrapper" ng-class="{active: activePane == '/'}">
+        <aside go-to-view="/">
           <header>
             <h1>T<br>R<br>E<br>V<br>O<br>R<br><br></h1>
             <h1>O<br>K<br>E<br>E<br>F<br>E<br></h1>
           </header>
         </aside>
         <div class="container">
-        <div ng-view=""></div>
+          <div ui-view="main"></div>
         </div>
-        <!-- <div class="container">
-          <article id="intro"> -->
-            <!-- <svg class="train" preserveAspectRatio="xMidYMid slice" viewBox="0 0 850 600" height="100%" width="100%" y="0px" x="0px" xmlns="http://www.w3.org/2000/svg" version="1.1">
-              <image href="/images/training-train-lime-barbell-39688.jpeg" preserveAspectRatio="none" x="0" y="0" width="850" height="600"></image>
-              <rect x="850" y="0" width="850" height="600" style="fill-opacity: 1;" fill="#151515"></rect>
-            </svg> -->
-            <!-- <p class="fade-in one">Time to change your life.</p>
-            <span class="fade-in two">Look better. </span>
-            <span class="fade-in three">Feel better. </span>
-            <span class="fade-in four">Perform better. </span>
-          </article>
-        </div> -->
       </section>
-      <section id="second" class="wrapper">
-        <aside>
+      <section id="second" class="wrapper" ng-class="{active: activePane == '/training', subactive: activePane == '/getstarted'}">
+        <aside go-to-view="/training">
           <header>
             <h1>T<br>R<br>A<br>I<br>N<br>I<br>N<br>G<br></h1>
           </header>
         </aside>
+        <div class="container">
+          <div ui-view="training"></div>
+        </div>
       </section>
-      <section id="third" class="wrapper">
-        <aside>
+      <section id="third" class="wrapper" ng-class="{active: activePane == '/getstarted'}">
+        <aside go-to-view="/getstarted">
           <header>
             <h1>G<br>E<br>T<br><br></h1>
             <h1>S<br>T<br>A<br>R<br>T<br>E<br>D<br></h1>
           </header>
         </aside>
+        <div class="container">
+          <div ui-view="getstarted"></div>
+        </div>
       </section>
     </main>
 
@@ -88,14 +83,18 @@
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/controllers/training.js"></script>
+        <script src="scripts/controllers/getstarted.js"></script>
         <script src="scripts/factories/preloader.js"></script>
+        <script src="scripts/directives/go-to-view.js"></script>
+        <!-- <script src="scripts/directives/active-link.js"></script> -->
         <!-- endbuild -->
 </body>
 </html>
