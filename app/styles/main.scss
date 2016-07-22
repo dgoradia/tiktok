@@ -136,7 +136,7 @@ main > section > aside {
   z-index: 2;
 }
 
-main > section > aside header {
+main > section > aside header, main > section > aside footer {
   padding: 18px;
   width: 2vw;
   font-size: 1rem;
@@ -146,6 +146,10 @@ main > section > aside header {
   word-break: break-all;
   text-transform: uppercase;
   z-index: 1;
+}
+
+main > section > aside footer {
+  bottom: 0;
 }
 
 main > section > .container {
@@ -189,8 +193,8 @@ video {
   transform: translateX(-50%) translateY(-50%);
 }
 
-#bgvid {
-  opacity: 0.8;
+#mainVideo {
+  opacity: 0.5;
 }
 
 #first {
@@ -318,6 +322,10 @@ video {
 
 .container-narrow > hr {
   margin: 30px 0;
+}
+
+.glyphicon {
+  cursor: pointer;
 }
 
 /* Main marketing message and sign up button */

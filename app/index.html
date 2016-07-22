@@ -26,8 +26,11 @@
             <h1>T<br>R<br>E<br>V<br>O<br>R<br><br></h1>
             <h1>O<br>K<br>E<br>E<br>F<br>E<br></h1>
           </header>
+          <footer ng-controller="SoundCtrl as sound">
+            <span class="glyphicon" ng-class="sound.video.muted ? 'glyphicon-volume-off': 'glyphicon-volume-up'" ng-click="sound.volume()"></span>
+          </footer>
         </aside>
-        <video autoplay loop muted id="bgvid">
+        <video autoplay loop muted id="mainVideo">
           <source src="https://s3-us-west-2.amazonaws.com/web-issue/training.webm" type="video/webm"></source>
           <source src="https://s3-us-west-2.amazonaws.com/web-issue/training.mp4" type="video/mp4"></source>
         </video>
@@ -90,6 +93,7 @@
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/training.js"></script>
         <script src="scripts/controllers/getstarted.js"></script>
+        <script src="scripts/controllers/sound.js"></script>
         <script src="scripts/factories/preloader.js"></script>
         <script src="scripts/directives/go-to-view.js"></script>
         <!-- endbuild -->
