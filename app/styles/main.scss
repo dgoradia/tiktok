@@ -3,6 +3,10 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+// @import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400';
+// @import 'https://fonts.googleapis.com/css?family=Lato:300';
+@import url('https://fonts.googleapis.com/css?family=Dosis:300,400,500,600');
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -158,8 +162,8 @@ h1, h2, h3, h4 {
 }
 
 h1, h2, h3, h4, p {
-  font-size: 1.1em;
-  font-weight: 400;
+  font-size: 1.2em;
+  font-weight: 500;
   margin: 0;
 }
 
