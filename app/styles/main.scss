@@ -255,6 +255,26 @@ video {
   transition-duration: 0.6s;
 }
 
+#second .row {
+  margin: 10vh 0 5vh 6vw;
+}
+
+#second .container article {
+  padding: 10px 15px 15px;
+  width: 95%;
+  background-color: #000000;
+  opacity: 0.5;
+  color: #ffffff;
+}
+
+#second .container h1 {
+  letter-spacing: 0.15em;
+}
+
+#second .container img {
+  opacity: 0.85;
+}
+
 #third {
   background-color: #c0392b;
   transform: translate3d(97vw, 0px, 0px);
@@ -368,7 +388,7 @@ video {
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 730px;
+    // max-width: 730px;
   }
 
   /* Remove the padding we set earlier */
