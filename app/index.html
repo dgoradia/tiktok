@@ -19,8 +19,6 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <!-- <img src="images/tiktok-logo.png" class="logo" alt="">&nbsp;</img> -->
-
     <main>
       <section id="first" class="wrapper" ng-class="{active: activePane == '/'}">
         <aside go-to-view="/">
@@ -30,8 +28,8 @@
           </header>
         </aside>
         <video autoplay loop muted id="bgvid">
-          <source src="videos/training.webm" type="video/webm"></source>
-          <source src="videos/training.mp4" type="video/mp4"></source>
+          <source src="https://s3-us-west-2.amazonaws.com/web-issue/training.webm" type="video/webm"></source>
+          <source src="https://s3-us-west-2.amazonaws.com/web-issue/training.mp4" type="video/mp4"></source>
         </video>
         <div class="container">
           <div ui-view="main">
@@ -60,10 +58,6 @@
         </div>
       </section>
     </main>
-
-    <!-- <div class="container">
-    <div ng-view=""></div>
-    </div> -->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <!-- <script>
@@ -98,7 +92,6 @@
         <script src="scripts/controllers/getstarted.js"></script>
         <script src="scripts/factories/preloader.js"></script>
         <script src="scripts/directives/go-to-view.js"></script>
-        <!-- <script src="scripts/directives/active-link.js"></script> -->
         <!-- endbuild -->
 </body>
 </html>

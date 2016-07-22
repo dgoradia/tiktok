@@ -224,17 +224,21 @@ video {
 
 #second {
   background-color: #fdf9ee;
-  // background:
-  //     linear-gradient(
-  //       rgba(0, 0, 0, 0.7),
-  //       rgba(0, 0, 0, 0.7)
-  //     ),
-  //     url(../images/second-bg.jpg) no-repeat 3vw 50% fixed;
-  // background-size: cover;
-  // -moz-background-size: cover;
-  // -o-background-size: cover;
-  // -webkit-background-size: cover;
+  background:
+      linear-gradient(
+        rgba(25, 25, 0, 0.7),
+        rgba(0, 0, 0, 0.7)
+      ),
+      url(../images/bg3.jpeg) no-repeat 3vw 50% fixed;
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
   transform: translate3d(94vw, 0px, 0px);
+}
+
+#second > aside {
+  background-color: #fdf9ee;
 }
 
 #second:hover {
