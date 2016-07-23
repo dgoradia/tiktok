@@ -40,9 +40,5 @@
   },
   "scripts": {
     "test": "karma start test/karma.conf.js"
-  },
-  "dependencies": {
-    "connect": "^3.4.1",
-    "serve-static": "^1.11.1"
   }
 }
