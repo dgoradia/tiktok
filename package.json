@@ -39,6 +39,10 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "karma start test/karma.conf.js"
+    "test": "karma start test/karma.conf.js",
+    "start": "grunt build && cd dist && http-server"
+  },
+  "dependencies": {
+    "http-server": "^0.9.0"
   }
 }
