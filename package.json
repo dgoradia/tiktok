@@ -44,6 +44,7 @@
     "start": "cd dist && http-server"
   },
   "dependencies": {
+    "bower": "^1.7.9",
     "grunt-cli": "^1.2.0",
     "http-server": "^0.9.0"
   }
