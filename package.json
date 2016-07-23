@@ -40,7 +40,7 @@
   },
   "scripts": {
     "test": "karma start test/karma.conf.js",
-    "postinstall": "bower install && grunt build",
+    "postinstall": "gem install compass && bower install && grunt build",
     "start": "cd dist && http-server"
   },
   "dependencies": {
