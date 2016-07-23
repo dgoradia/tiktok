@@ -40,9 +40,11 @@
   },
   "scripts": {
     "test": "karma start test/karma.conf.js",
-    "start": "grunt build && cd dist && http-server"
+    "postinstall": "bower install && grunt build",
+    "start": "cd dist && http-server"
   },
   "dependencies": {
+    "grunt-cli": "^1.2.0",
     "http-server": "^0.9.0"
   }
 }
