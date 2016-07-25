@@ -90,7 +90,7 @@ angular
           return $location.path();
       };
 
-      $rootScope.$watch(path, function(newVal, oldVal) {
+      $rootScope.$watch(path, function(newVal) {
           $rootScope.activePane = newVal;
       });
   }]);
